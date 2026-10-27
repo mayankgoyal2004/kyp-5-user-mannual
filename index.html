@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KYP 5 Platform | Official User Operating Manual &amp; Comprehensive Documentation</title>
+  <meta name="description" content="Official Step-by-Step Operating Manual & Complete Documentation Guide for KYP 5 (Know Your Personality) Online Psychometric & Career Assessment Platform.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+</head>
+<body>
+
+  <!-- Top Header Navigation Bar -->
+  <header class="header-nav">
+    <div class="nav-brand">
+      <img src="assets/images/logo.svg" alt="KYP 5 Logo" class="brand-logo-img">
+      <div>
+        <span>KYP 5</span>
+        <span class="brand-badge">Psychometric v2.5</span>
+      </div>
+    </div>
+
+    <!-- Quick Search Button (Ctrl + K) -->
+    <div class="nav-search">
+      <button class="search-btn" id="searchTriggerBtn">
+        <span><i class="fa-solid fa-magnifying-glass"></i> Search documentation &amp; guides...</span>
+        <span class="search-shortcut">Ctrl K</span>
+      </button>
+    </div>
+
+    <div class="nav-controls">
+      <button class="theme-toggle" id="themeToggleBtn" title="Toggle Light/Dark Theme">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+      <button class="mobile-toggle" id="mobileToggleBtn" title="Toggle Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Interactive Search Modal Overlay -->
+  <div class="modal-overlay" id="searchModalOverlay">
+    <div class="search-modal">
+      <div class="search-modal-header">
+        <i class="fa-solid fa-magnifying-glass" style="color: var(--text-muted);"></i>
+        <input type="text" id="searchInput" placeholder="Search modules, scoring engine, test authoring, reports..." autocomplete="off">
+        <span class="search-shortcut">ESC</span>
+      </div>
+      <div class="search-results" id="searchResults">
+        <div style="padding: 24px; text-align: center; color: var(--text-muted); font-size: 13.5px;">
+          Type any keyword (e.g. <i>Scoring, Assessment Groups, Options, Versioning, PDF Report, Institutions, CMS, Anti-cheat</i>) to search...
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Layout Container: Left Sidebar + Main Content + Right TOC -->
+  <div class="layout-container">
+
+    <!-- Left Collapsible Navigation Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      
+      <div class="nav-category">
+        <div class="category-title"><i class="fa-solid fa-compass"></i> Platform Overview</div>
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#intro" class="nav-link active"><span class="nav-icon"><i class="fa-solid fa-brain"></i></span> 1. System Overview</a></li>
+          <li class="nav-item"><a href="#architecture" class="nav-link"><span class="nav-icon"><i class="fa-solid fa-network-wired"></i></span> 2. Architecture &amp; Portals</a></li>
+          <li class="nav-item"><a href="#getting-started" class="nav-link"><span class="nav-icon"><i class="fa-solid fa-play"></i></span> 3. Installation &amp; Setup</a></li>
+          <li class="nav-item"><a href="#roles-permissions" class="nav-link"><span class="nav-icon"><i class="fa-solid fa-user-shield"></i></span> 4. RBAC &amp; Permissions</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-category">
+        <div class="category-title"><i class="fa-solid fa-sliders"></i> Assessment Engine</div>
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#assessment-groups" class="nav-link"><span class="nav-icon"><i class="fa-solid fa-layer-group"></i></span> 5. Assessment Groups</a></li>
+          <li class="nav-item"><a href="#questions-weights" class="nav-link"><span class="nav-icon"><i class="fa-solid fa-weight-hanging"></i></span> 6. Questions &amp; Weights</a></li>
+          <li class="nav-item"><a href="#tests-lifecycle" class="nav-link"><span class="nav-icon"><i class="fa-solid fa-file-pen"></i></span> 7. Test Authoring &amp; Rules</a></li>
+          <li class="nav-item"><a href="#publishing-versioning" class="nav-link"><span class="nav-icon"><i class="fa-solid fa-code-branch"></i></span> 8. Publishing &amp; Versions</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-category">
+        <div class="category-title"><i class="fa-solid fa-graduation-cap"></i> Operations &amp; Delivery</div>
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#students-management" class="nav-link"><span class="nav-icon"><i class="fa-solid fa-users"></i></span> 9. Student Management</a></li>
+          <li class="nav-item"><a href="#institutions-portal" class="nav-link"><span class="nav-icon"><i class="fa-solid fa-school"></i></span> 10. Institutions &amp; Billing</a></li>
+          <li class="nav-item"><a href="#student-experience" class="nav-link"><span class="nav-icon"><i class="fa-solid fa-laptop-code"></i></span> 11. Student Experience</a></li>
+          <li class="nav-item"><a href="#results-normalization" class="nav-link"><span class="nav-icon"><i class="fa-solid fa-chart-pie"></i></span> 12. Results &amp; Normalization</a></li>
+          <li class="nav-item"><a href="#pdf-reports" class="nav-link"><span class="nav-icon"><i class="fa-solid fa-file-pdf"></i></span> 13. PDF Reports Worker</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-category">
+        <div class="category-title"><i class="fa-solid fa-globe"></i> Website &amp; Settings</div>
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#cms-modules" class="nav-link"><span class="nav-icon"><i class="fa-solid fa-window-restore"></i></span> 14. Content CMS Modules</a></li>
+          <li class="nav-item"><a href="#communications-crm" class="nav-link"><span class="nav-icon"><i class="fa-solid fa-envelope-open-text"></i></span> 15. Contacts &amp; Newsletter</a></li>
+          <li class="nav-item"><a href="#settings-localization" class="nav-link"><span class="nav-icon"><i class="fa-solid fa-gear"></i></span> 16. Platform Settings</a></li>
+          <li class="nav-item"><a href="#recycle-bin" class="nav-link"><span class="nav-icon"><i class="fa-solid fa-trash-can"></i></span> 17. Recycle Bin &amp; Audits</a></li>
+          <li class="nav-item"><a href="#troubleshooting-faq" class="nav-link"><span class="nav-icon"><i class="fa-solid fa-circle-question"></i></span> 18. Troubleshooting &amp; FAQ</a></li>
+          <li class="nav-item"><a href="#developer-api" class="nav-link"><span class="nav-icon"><i class="fa-solid fa-code"></i></span> 19. API Quick Reference</a></li>
+        </ul>
+      </div>
+
+    </aside>
+
+    <!-- Mobile Drawer Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content Documentation Body -->
+    <main class="main-content">
+
+      <!-- Document Header -->
+      <div class="doc-header">
+        <div class="breadcrumbs">
+          <a href="#">KYP 5</a>
+          <span>/</span>
+          <a href="#">Official Documentation</a>
+          <span>/</span>
+          <span>Operating Manual v2.5</span>
+        </div>
+        <h1>KYP 5 Platform — Comprehensive User Operating Manual</h1>
+        <p style="font-size: 16px; color: var(--text-secondary);">
+          Step-by-Step Practical Operating Guide, Administration Workflows &amp; Assessment Engine Architecture
+        </p>
+        <div class="doc-header-meta">
+          <div class="doc-meta-item"><i class="fa-solid fa-building"></i> Vibrantick Infotech Solutions</div>
+          <div class="doc-meta-item"><i class="fa-solid fa-shield-halved"></i> Enterprise Multi-Tenant Ready</div>
+          <div class="doc-meta-item"><i class="fa-solid fa-calendar-check"></i> Updated: August 2026</div>
+        </div>
+      </div>
+
+      <!-- Section 1: System Overview -->
+      <section id="intro" class="doc-section">
+        <h2><i class="fa-solid fa-brain"></i> 1. System Overview &amp; Psychometric Science</h2>
+        <p>
+          <strong>KYP 5 (Know Your Personality)</strong> is an enterprise psychometric assessment and stream-finder examination platform designed for educational institutions, career counselors, coaching institutes, and HR evaluators.
+        </p>
+
+        <div class="callout callout-info">
+          <div class="callout-title"><i class="fa-solid fa-circle-info"></i> Traditional Exam vs. KYP 5 Profile Discovery</div>
+          Unlike traditional examination portals that calculate binary right/wrong marks, KYP 5 implements a <strong>weighted trait-scoring model</strong>. Every question option contributes hidden point weights toward one or more <strong>Assessment Groups</strong> (e.g., Science, Commerce, Humanities, Engineering, Creative Arts, Leadership). The scoring engine normalizes these raw points into percentages, identifies the candidate's Primary, Secondary, and Tertiary profiles, and automatically generates a comprehensive, publication-ready PDF career report.
+        </div>
+
+        <h3>Core Platform Capabilities:</h3>
+        <ul>
+          <li><strong>Configurable Assessment Engine:</strong> Build custom psychometric, aptitude, learning style, and stream-finder evaluations with multi-group option scoring.</li>
+          <li><strong>Immutable Test Version Snapshots:</strong> Once a test is published, its scoring schema and questions are locked into a version snapshot so historical student reports are never altered by future edits.</li>
+          <li><strong>Anti-Cheat &amp; Integrity Signals:</strong> Automated detection of browser tab switches, fullscreen violations, time-spent tracking per question, and timer auto-submission.</li>
+          <li><strong>Background PDF Report Worker:</strong> Puppeteer and Handlebars worker pool that renders multi-page, personalized PDF career reports with radar charts and actionable guidance.</li>
+          <li><strong>Multi-Tenant Institution Portal:</strong> Dedicated portal for schools, colleges, and coaching centers to manage student rosters, staff counselors, and subscription tiers.</li>
+          <li><strong>Full Content Management Suite (CMS):</strong> Manage public hero banners, blogs, testimonials, pricing tiers, services, gallery, and FAQs directly from the Admin Dashboard.</li>
+        </ul>
+
+        <div class="diagram-card">
+          <img src="assets/images/scoring_pipeline.svg" alt="KYP 5 Scoring Pipeline" class="zoomable-img" style="max-height: 280px; width: auto;">
+          <div class="diagram-caption">Figure 1.1: Complete End-to-End Pipeline — from Student Option Selection to Branded PDF Generation.</div>
+        </div>
+      </section>
+
+      <!-- Section 2: Architecture & Portals -->
+      <section id="architecture" class="doc-section">
+        <h2><i class="fa-solid fa-network-wired"></i> 2. Platform Architecture &amp; Portals</h2>
+        <p>
+          KYP 5 is built on an enterprise decoupled stack providing specialized interfaces for each persona:
+        </p>
+
+        <div class="data-table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Portal / Layer</th>
+                <th>Technology Stack</th>
+                <th>Primary User Base</th>
+                <th>Default URL / Port</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Admin Dashboard</strong></td>
+                <td>React 19, Vite, Tailwind CSS, Radix UI, TanStack Query</td>
+                <td>Super Admin, Exam Managers, Content Editors</td>
+                <td><code>http://localhost:5173</code></td>
+              </tr>
+              <tr>
+                <td><strong>Institution Portal</strong></td>
+                <td>React 19, Vite, Tailwind CSS, Tenant Session Guard</td>
+                <td>School Principals, Batch Coordinators, Counselors</td>
+                <td><code>http://localhost:5174</code></td>
+              </tr>
+              <tr>
+                <td><strong>Student Assessment Portal</strong></td>
+                <td>Responsive Web Client, Fullscreen Guard, Timer Engine</td>
+                <td>Candidates, Students, Career Aspirants</td>
+                <td><code>http://localhost:3000 /student</code></td>
+              </tr>
+              <tr>
+                <td><strong>Backend Core API</strong></td>
+                <td>Node.js, Express, TypeScript, Prisma ORM, PostgreSQL</td>
+                <td>Secure REST API, JWT Auth, Background Workers</td>
+                <td><code>http://localhost:7777/api</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="diagram-card">
+          <img src="assets/images/architecture.svg" alt="KYP 5 Multi-Layer Architecture" class="zoomable-img" style="max-height: 300px; width: auto;">
+          <div class="diagram-caption">Figure 2.1: Multi-Layer Architecture showing Portals, API Gateway, Scoring Engine, and Worker Services.</div>
+        </div>
+      </section>
+
+      <!-- Section 3: Getting Started & Installation -->
+      <section id="getting-started" class="doc-section">
+        <h2><i class="fa-solid fa-play"></i> 3. Getting Started &amp; Installation Guide</h2>
+        <p>Follow these exact steps to install, configure, and launch the KYP 5 ecosystem on your workstation or production server.</p>
+
+        <h3>System Prerequisites:</h3>
+        <ul>
+          <li><strong>Node.js:</strong> v18.0.0 or higher</li>
+          <li><strong>PostgreSQL:</strong> v14.0 or higher running locally or accessible via cloud (Neon, Supabase, RDS)</li>
+          <li><strong>Package Manager:</strong> npm v9+ or yarn</li>
+          <li><strong>Web Browser:</strong> Chrome, Edge, Safari, or Firefox</li>
+        </ul>
+
+        <h3>Step-by-Step Installation Workflow:</h3>
+
+        <div class="steps-container">
+          <div class="step-item">
+            <div class="step-badge">1</div>
+            <div class="step-content">
+              <h4>Configure Backend Environment</h4>
+              <p>Navigate to <code>backend/</code> and copy the example environment file:</p>
+              <div class="code-card">
+                <div class="code-header">
+                  <span>Terminal — Backend Setup</span>
+                  <button class="copy-code-btn"><i class="fa-regular fa-copy"></i> Copy</button>
+                </div>
+                <pre><code>cd backend
+npm install
+copy .env.example .env   # (On Linux/macOS: cp .env.example .env)</code></pre>
+              </div>
+              <p>Edit <code>backend/.env</code> and ensure your <code>DATABASE_URL</code> is properly configured:</p>
+              <div class="code-card">
+                <div class="code-header">
+                  <span>backend/.env Configuration</span>
+                  <button class="copy-code-btn"><i class="fa-regular fa-copy"></i> Copy</button>
+                </div>
+                <pre><code>DATABASE_URL="postgresql://postgres:password@localhost:5432/kyp5?schema=public"
+PORT=7777
+NODE_ENV="development"
+JWT_SECRET="kyp5_super_secure_jwt_secret_key_2026_xyz"
+JWT_EXPIRES_IN="7d"
+JWT_REFRESH_SECRET="kyp5_super_secure_refresh_secret_key_2026_abc"
+JWT_REFRESH_EXPIRES_IN="30d"
+FRONTEND_URL="http://localhost:5173"
+MAX_FILE_SIZE=10485760</code></pre>
+              </div>
+            </div>
+          </div>
+
+          <div class="step-item">
+            <div class="step-badge">2</div>
+            <div class="step-content">
+              <h4>Run Database Migrations &amp; Seed Default Accounts</h4>
+              <p>Initialize the database schema and populate all default permissions, roles, assessment groups, sample tests, and the initial Super Admin account:</p>
+              <div class="code-card">
+                <div class="code-header">
+                  <span>Terminal — Database Setup</span>
+                  <button class="copy-code-btn"><i class="fa-regular fa-copy"></i> Copy</button>
+                </div>
+                <pre><code>npm run db:migrate   # Applies Prisma schema to PostgreSQL
+npm run db:seed      # Seeds roles, permissions, demo tests & superadmin</code></pre>
+              </div>
+            </div>
+          </div>
+
+          <div class="step-item">
+            <div class="step-badge">3</div>
+            <div class="step-content">
+              <h4>Start the Backend API Server</h4>
+              <p>Launch the API server in development mode (with hot-reloading). Both background workers (Timeout Scheduler &amp; Report Worker) start automatically:</p>
+              <div class="code-card">
+                <div class="code-header">
+                  <span>Terminal — Start API</span>
+                  <button class="copy-code-btn"><i class="fa-regular fa-copy"></i> Copy</button>
+                </div>
+                <pre><code>npm run dev          # API starts on http://localhost:7777</code></pre>
+              </div>
+              <p>Verify health by visiting <code>http://localhost:7777/api/health</code> in your browser. Expected response: <code>{ "status": "ok" }</code>.</p>
+            </div>
+          </div>
+
+          <div class="step-item">
+            <div class="step-badge">4</div>
+            <div class="step-content">
+              <h4>Launch Admin Dashboard &amp; First Login</h4>
+              <p>In a second terminal window, navigate to <code>dashboard/</code> and start Vite:</p>
+              <div class="code-card">
+                <div class="code-header">
+                  <span>Terminal — Dashboard Setup</span>
+                  <button class="copy-code-btn"><i class="fa-regular fa-copy"></i> Copy</button>
+                </div>
+                <pre><code>cd dashboard
+npm install
+npm run dev          # Launches on http://localhost:5173</code></pre>
+              </div>
+              <p>Open <code>http://localhost:5173</code> and log in using the seeded Super Admin credentials:</p>
+              <ul>
+                <li><strong>Email:</strong> <code>admin@gmail.com</code></li>
+                <li><strong>Password:</strong> <code>Password@123</code></li>
+              </ul>
+              <div class="callout callout-warning">
+                <div class="callout-title"><i class="fa-solid fa-triangle-exclamation"></i> Security Best Practice</div>
+                Immediately change this default password upon initial login via the top-right user menu ➔ <strong>Change Password</strong>.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: RBAC & Permissions -->
+      <section id="roles-permissions" class="doc-section">
+        <h2><i class="fa-solid fa-user-shield"></i> 4. User Roles &amp; Security Matrix (RBAC)</h2>
+        <p>
+          KYP 5 implements strict dual-layer Role-Based Access Control (RBAC). Permissions are verified both on the UI layer (hiding inaccessible menus) and on the API layer via <code>requirePermission(module, action)</code> middleware.
+        </p>
+
+        <div class="data-table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Role Name</th>
+                <th>Target Persona</th>
+                <th>Assessment &amp; Test Control</th>
+                <th>Student &amp; Results Access</th>
+                <th>CMS &amp; Public Website</th>
+                <th>System Settings &amp; Roles</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="badge badge-danger">SUPER_ADMIN</span></td>
+                <td>Platform Owner / Director</td>
+                <td><span class="badge badge-success">Full Control</span></td>
+                <td><span class="badge badge-success">Full Access</span></td>
+                <td><span class="badge badge-success">Full Access</span></td>
+                <td><span class="badge badge-success">Full Access</span></td>
+              </tr>
+              <tr>
+                <td><span class="badge badge-primary">EXAM_MANAGER</span></td>
+                <td>Academic Head / Test Author</td>
+                <td>Create, Edit, Publish Tests &amp; Scoring</td>
+                <td>Inspect Attempts &amp; Download Reports</td>
+                <td>No Access</td>
+                <td>No Access</td>
+              </tr>
+              <tr>
+                <td><span class="badge badge-warning">CONTENT_EDITOR</span></td>
+                <td>Marketing / Web Administrator</td>
+                <td>No Access</td>
+                <td>No Access</td>
+                <td><span class="badge badge-success">Full CMS Access</span></td>
+                <td>General &amp; SEO Only</td>
+              </tr>
+              <tr>
+                <td><span class="badge badge-info">INSTITUTION_ADMIN</span></td>
+                <td>School Principal / Coordinator</td>
+                <td>Assign pre-published tests to batches</td>
+                <td>Manage Roster &amp; Cohort Results</td>
+                <td>No Access</td>
+                <td>Institution Profile Only</td>
+              </tr>
+              <tr>
+                <td><span class="badge badge-primary">STUDENT</span></td>
+                <td>Assessment Candidate</td>
+                <td>Take assigned / active tests</td>
+                <td>View own results &amp; download PDF</td>
+                <td>Read Public Website</td>
+                <td>Profile Only</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Granular Permission Overrides:</h3>
+        <p>
+          Need to grant a staff member access to edit blogs without making them a full Content Editor? KYP 5 supports <strong>Per-User Permission Overrides</strong>. Navigate to <code>/users/:id/permissions</code> to grant or revoke specific <code>read / create / update / delete</code> privileges for that individual user account without altering the base role.
+        </p>
+      </section>
+
+      <!-- Section 5: Assessment Groups -->
+      <section id="assessment-groups" class="doc-section">
+        <h2><i class="fa-solid fa-layer-group"></i> 5. Assessment Groups &amp; Sub-Groups</h2>
+        <p>
+          Assessment Groups represent the personality traits, career streams, or behavioral dimensions evaluated by your assessments.
+        </p>
+
+        <h3>Step-by-Step Assessment Group Setup:</h3>
+        <div class="steps-container">
+          <div class="step-item">
+            <div class="step-badge">1</div>
+            <div class="step-content">
+              <h4>Access Assessment Groups Directory</h4>
+              <p>Navigate to <strong>Assessment Groups</strong> (<code>/assessment-groups</code>) from the sidebar. You will see existing groups (e.g., <i>Science, Commerce, Humanities, Creative Arts, Leadership</i>).</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-badge">2</div>
+            <div class="step-content">
+              <h4>Create or Modify a Group</h4>
+              <p>Click <strong>Add Assessment Group</strong>. Specify:</p>
+              <ul>
+                <li><strong>Name:</strong> Descriptive label (e.g., <i>Technological &amp; Engineering Aptitude</i>).</li>
+                <li><strong>Code:</strong> Unique uppercase identifier (e.g., <code>ENG_TECH</code>).</li>
+                <li><strong>Color:</strong> Hex code (e.g., <code>#2563eb</code>) used in radar charts and PDF reports.</li>
+                <li><strong>Description:</strong> Brief overview of what this trait represents.</li>
+                <li><strong>Display Order:</strong> Sequential integer controlling ranking display.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-badge">3</div>
+            <div class="step-content">
+              <h4>Configure Granular Sub-Groups</h4>
+              <p>Open <strong>Assessment Sub-Groups</strong> (<code>/assessment-sub-groups</code>). Sub-groups break down a parent group into specific competencies. For example, under <i>Science</i>, add <i>Logical Reasoning</i> and <i>Spatial Aptitude</i>. Sub-groups allow the generated PDF report to provide rich, nuanced feedback.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6: Questions & Weights -->
+      <section id="questions-weights" class="doc-section">
+        <h2><i class="fa-solid fa-weight-hanging"></i> 6. Questions &amp; Option Scoring Engine</h2>
+        <p>
+          In KYP 5, questions do not have a single "correct" answer key. Instead, each option carries <strong>hidden score weights</strong> that feed points to designated Assessment Groups.
+        </p>
+
+        <h3>Step-by-Step Question Authoring:</h3>
+        <div class="steps-container">
+          <div class="step-item">
+            <div class="step-badge">1</div>
+            <div class="step-content">
+              <h4>Add a New Question</h4>
+              <p>Navigate to <strong>Questions</strong> (<code>/questions</code>) ➔ click <strong>Add Question</strong>. Select the parent Test from the dropdown.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-badge">2</div>
+            <div class="step-content">
+              <h4>Compose Question Content &amp; Media</h4>
+              <p>Enter question text using the rich-text editor (supporting bold, italics, numbered lists, math symbols). Optionally upload an illustration or diagram using the image uploader.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-badge">3</div>
+            <div class="step-content">
+              <h4>Define Options (Answer Choices)</h4>
+              <p>Add 2 to 6 options (e.g., Option A: <i>"I enjoy solving mathematical puzzles"</i>, Option B: <i>"I prefer sketching portraits and graphic designs"</i>).</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-badge">4</div>
+            <div class="step-content">
+              <h4>Assign Option Score Weights (Assessment Option Scores)</h4>
+              <p>Navigate to <code>/assessment-option-scores</code>. For each option, define which Assessment Group it contributes points to:</p>
+              <ul>
+                <li><strong>Option A:</strong> ➔ <code>Science</code>: +10 pts, <code>Engineering</code>: +5 pts</li>
+                <li><strong>Option B:</strong> ➔ <code>Creative Arts</code>: +10 pts, <code>Humanities</code>: +4 pts</li>
+              </ul>
+              <div class="callout callout-success">
+                <div class="callout-title"><i class="fa-solid fa-lightbulb"></i> Recommended Multiplier Standard</div>
+                Use a <strong>10× / 5× forced-choice pattern</strong>: award 10 points to the primary trait and 5 points to the secondary trait. This ensures robust statistical variance between candidate profiles.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 7: Test Authoring & Lifecycle -->
+      <section id="tests-lifecycle" class="doc-section">
+        <h2><i class="fa-solid fa-file-pen"></i> 7. Test Authoring &amp; Configuration Rules</h2>
+        <p>
+          A <strong>Test</strong> is the container that governs the student examination experience, anti-cheat limits, and timer enforcement.
+        </p>
+
+        <div class="data-table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Configuration Field</th>
+                <th>Type / Options</th>
+                <th>Description &amp; Operational Impact</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Title &amp; Slug</strong></td>
+                <td>String (Unique)</td>
+                <td>Display name and URL slug (e.g., <code>stream-finder-class-10</code>).</td>
+              </tr>
+              <tr>
+                <td><strong>Duration</strong></td>
+                <td>Integer (Minutes)</td>
+                <td>Time allotted for the exam. Controls the countdown timer on the student interface.</td>
+              </tr>
+              <tr>
+                <td><strong>Auto Submit</strong></td>
+                <td>Boolean (Toggle)</td>
+                <td>When enabled, the backend cron scheduler automatically submits the test at timer expiry.</td>
+              </tr>
+              <tr>
+                <td><strong>Allowed Attempts</strong></td>
+                <td>Integer (Default: 1)</td>
+                <td>Maximum times a candidate may retake this assessment. Prevents bias from retakes.</td>
+              </tr>
+              <tr>
+                <td><strong>Min Answers Required</strong></td>
+                <td>Integer</td>
+                <td>Minimum questions answered before the "Submit" button activates for the student.</td>
+              </tr>
+              <tr>
+                <td><strong>Shuffle Questions</strong></td>
+                <td>Boolean (Toggle)</td>
+                <td>Randomizes question presentation order per candidate to combat collusion.</td>
+              </tr>
+              <tr>
+                <td><strong>Report Template</strong></td>
+                <td>Dropdown</td>
+                <td>Selects which PDF template (branding, cover, layout) is generated upon test completion.</td>
+              </tr>
+              <tr>
+                <td><strong>Languages</strong></td>
+                <td>Multi-Select</td>
+                <td>Attaches available translation languages (e.g., English, Hindi, Spanish).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 8: Publishing & Versioning -->
+      <section id="publishing-versioning" class="doc-section">
+        <h2><i class="fa-solid fa-code-branch"></i> 8. Test Publishing &amp; Immutable Version Snapshots</h2>
+        <p>
+          To maintain psychometric and legal validity, KYP 5 enforces an <strong>Immutable Versioning Protocol</strong>.
+        </p>
+
+        <div class="callout callout-warning">
+          <div class="callout-title"><i class="fa-solid fa-triangle-exclamation"></i> Critical Assessment Integrity Rule</div>
+          Once students have started taking a test, modifying its questions or weights could invalidate historical results. KYP 5 solves this: clicking <strong>Publish</strong> creates a permanent, frozen <strong>Assessment Version Snapshot</strong>. Every student attempt is irrevocably linked to the exact version snapshot active when they began.
+        </div>
+
+        <h3>Publishing Workflow:</h3>
+        <ol>
+          <li>Complete test setup, author all questions, and assign option weights.</li>
+          <li>Open the test detail page at <code>/tests/:id</code>.</li>
+          <li>Review the <strong>Questions</strong> tab and <strong>Assessment Groups</strong> tab.</li>
+          <li>Click the green <strong>Publish Test</strong> button. The system validates that all options have weights, generates Version 1.0 (or increments the version number), and marks the test live for students.</li>
+          <li>To make updates later, edit the draft and click <strong>Publish</strong> again. New candidates receive Version 2.0; previous candidate results remain safely anchored to Version 1.0.</li>
+        </ol>
+      </section>
+
+      <!-- Section 9: Student Management -->
+      <section id="students-management" class="doc-section">
+        <h2><i class="fa-solid fa-users"></i> 9. Student Management &amp; Roster Control</h2>
+        <p>
+          Admins and institutional staff manage candidates on the <strong>Students</strong> directory (<code>/students</code>).
+        </p>
+
+        <h3>Core Operations:</h3>
+        <ul>
+          <li><strong>Search &amp; Filter:</strong> Filter students by name, email, enrolled school/institution, grade/class, and verification status.</li>
+          <li><strong>Manual Enrollment:</strong> Register students directly by entering their name, email, phone, DOB, parents' contact, and assigning them to an Institution.</li>
+          <li><strong>Attempt History Inspection:</strong> Click on any student profile to review all past attempts, start/completion timestamps, total tab switches recorded, and direct links to their PDF reports.</li>
+          <li><strong>Account Actions:</strong> Reset student passwords, resend verification emails, or temporarily deactivate accounts.</li>
+          <li><strong>Data Export:</strong> Download candidate rosters to CSV or Excel formatted for institutional reporting.</li>
+        </ul>
+      </section>
+
+      <!-- Section 10: Institutions & Billing -->
+      <section id="institutions-portal" class="doc-section">
+        <h2><i class="fa-solid fa-school"></i> 10. Institutions &amp; Multi-Tenant Portal</h2>
+        <p>
+          Schools, coaching institutes, and corporate partners use the dedicated <strong>Institution Portal</strong> (<code>/kyp5-institution-portal</code>) to manage their cohorts independently.
+        </p>
+
+        <h3>Institution Capabilities:</h3>
+        <div class="steps-container">
+          <div class="step-item">
+            <div class="step-badge">1</div>
+            <div class="step-content">
+              <h4>Tenant Onboarding &amp; Profile Setup</h4>
+              <p>Admins register new institutions at <code>/institutions</code>, uploading their school logo, official domain, contact coordinators, and assigning student quota limits.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-badge">2</div>
+            <div class="step-content">
+              <h4>Staff &amp; Counselor Management</h4>
+              <p>Institutions invite academic counselors and batch managers, granting them access to view student results and add private counseling notes without granting administrative access.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-badge">3</div>
+            <div class="step-content">
+              <h4>Cohort Test Assignment</h4>
+              <p>Staff select an entire batch (e.g., <i>Class 10 - Section A</i>) and assign specific assessments (e.g., <i>Stream Finder Assessment</i>) with a custom completion deadline.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-badge">4</div>
+            <div class="step-content">
+              <h4>Subscription &amp; Paywall Management</h4>
+              <p>Institutions track their active student subscription package, trial period, and renewal dates at <code>/institution/billing</code>. When quotas are exhausted, staff can upgrade plans seamlessly.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 11: Student Experience -->
+      <section id="student-experience" class="doc-section">
+        <h2><i class="fa-solid fa-laptop-code"></i> 11. Student Test-Taking Experience &amp; Anti-Cheat</h2>
+        <p>
+          The candidate assessment interface is streamlined, distraction-free, and protected by real-time integrity monitoring.
+        </p>
+
+        <h3>Candidate Assessment Journey:</h3>
+        <ol>
+          <li><strong>Registration / Login:</strong> Student logs in using email/password or registers with mobile OTP verification.</li>
+          <li><strong>Instructions &amp; Language Selection:</strong> Candidate reviews instructions, allowed duration, and selects their preferred language (e.g., English or Hindi).</li>
+          <li><strong>Fullscreen Engagement:</strong> The test launches in full-browser mode. A live countdown timer stays pinned in the header.</li>
+          <li><strong>Anti-Cheat Tracking:</strong> If the student switches browser tabs or minimizes the window, the system records a <strong>Tab Switch Violation</strong> counter and issues a visual warning dialog.</li>
+          <li><strong>Question Palette:</strong> Students can navigate between questions, flag questions for review, and change answers freely before final submission.</li>
+          <li><strong>Submission &amp; Timeout:</strong> When the student clicks "Submit" (or when the timer hits zero), answers are frozen and instantly passed to the scoring engine.</li>
+        </ol>
+      </section>
+
+      <!-- Section 12: Results & Normalization -->
+      <section id="results-normalization" class="doc-section">
+        <h2><i class="fa-solid fa-chart-pie"></i> 12. Results, Normalization &amp; Profile Ranking</h2>
+        <p>
+          Upon submission, the scoring engine executes the following mathematical sequence:
+        </p>
+
+        <div class="steps-container">
+          <div class="step-item">
+            <div class="step-badge">1</div>
+            <div class="step-content">
+              <h4>Raw Score Summation</h4>
+              <p>Sums all points accrued by the student's selected options across each Assessment Group and Sub-Group.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-badge">2</div>
+            <div class="step-content">
+              <h4>Percentage Normalization</h4>
+              <p>Normalizes raw group scores against the maximum attainable points in that group using the formula:</p>
+              <div class="code-card">
+                <div class="code-header"><span>Scoring Normalization Formula</span></div>
+                <pre><code>Normalized_Group_Score (%) = (Raw_Earned_Points / Maximum_Possible_Points) * 100</code></pre>
+              </div>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-badge">3</div>
+            <div class="step-content">
+              <h4>Profile Discovery &amp; Career Ranking</h4>
+              <p>Groups are ranked in descending order to assign the candidate's:</p>
+              <ul>
+                <li><strong>Primary Profile:</strong> Dominant inclination (e.g., <i>Science &amp; Research — 84%</i>).</li>
+                <li><strong>Secondary Profile:</strong> Complementary strength (e.g., <i>Engineering &amp; Tech — 76%</i>).</li>
+                <li><strong>Tertiary Profile:</strong> Latent interest (e.g., <i>Creative Arts — 62%</i>).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 13: PDF Reports Worker -->
+      <section id="pdf-reports" class="doc-section">
+        <h2><i class="fa-solid fa-file-pdf"></i> 13. Automated PDF Report Generation</h2>
+        <p>
+          Once scoring completes, a background worker renders a comprehensive multi-page PDF career report using Puppeteer.
+        </p>
+
+        <h3>Report Worker Lifecycle:</h3>
+        <ul>
+          <li><strong>Queue Enqueue:</strong> A <code>ReportJob</code> is created in <code>PENDING</code> state immediately upon test submission.</li>
+          <li><strong>Puppeteer Worker Pool:</strong> The worker picks up the job, marks it <code>PROCESSING</code>, binds the candidate's scores to the assigned Handlebars <strong>Report Template</strong>, and compiles radar charts and career paths into a PDF.</li>
+          <li><strong>Delivery (READY):</strong> The finished PDF is saved to <code>backend/public/uploads/reports/</code> and marked <code>READY</code>. It becomes instantly downloadable by the student and admin.</li>
+          <li><strong>Retry on Failure:</strong> If a job fails (e.g., memory limits), it is marked <code>FAILED</code> with error stack traces. Admins can click <strong>Retry Report</strong> from <code>/results/:id</code> to regenerate.</li>
+        </ul>
+      </section>
+
+      <!-- Section 14: Content CMS Modules -->
+      <section id="cms-modules" class="doc-section">
+        <h2><i class="fa-solid fa-window-restore"></i> 14. Website Content Management (CMS)</h2>
+        <p>
+          Non-technical staff can manage every section of the public website from dedicated admin modules:
+        </p>
+
+        <div class="data-table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>CMS Module</th>
+                <th>Admin Route</th>
+                <th>Key Fields &amp; Media</th>
+                <th>Public Site Placement</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Banners</strong></td>
+                <td><code>/banners</code></td>
+                <td>Title, subtitle, cover image, CTA button text &amp; link, display order</td>
+                <td>Homepage Hero Carousel</td>
+              </tr>
+              <tr>
+                <td><strong>Blogs &amp; Articles</strong></td>
+                <td><code>/blogs</code></td>
+                <td>Category, thumbnail, rich-text body, SEO meta tags, author</td>
+                <td>Public Blog &amp; Resources hub</td>
+              </tr>
+              <tr>
+                <td><strong>Testimonials</strong></td>
+                <td><code>/testimonials</code></td>
+                <td>Student name, designation, quote, avatar image, 1–5 star rating</td>
+                <td>Social Proof Slider</td>
+              </tr>
+              <tr>
+                <td><strong>Pricing Plans</strong></td>
+                <td><code>/pricing</code></td>
+                <td>Plan badge, price, feature list, highlighted toggle, buy link</td>
+                <td>Pricing &amp; Packages section</td>
+              </tr>
+              <tr>
+                <td><strong>Services</strong></td>
+                <td><code>/services</code></td>
+                <td>Title, description, multi-step work process, benefit cards</td>
+                <td>Counseling &amp; Offerings page</td>
+              </tr>
+              <tr>
+                <td><strong>Gallery</strong></td>
+                <td><code>/gallery</code></td>
+                <td>Image upload, category, title, display order</td>
+                <td>Campus &amp; Events Gallery</td>
+              </tr>
+              <tr>
+                <td><strong>Counters</strong></td>
+                <td><code>/counters</code></td>
+                <td>Metric label (e.g., <i>15,000+ Assessed</i>), number, icon</td>
+                <td>Homepage Statistics ribbon</td>
+              </tr>
+              <tr>
+                <td><strong>Help Center</strong></td>
+                <td><code>/help-center</code></td>
+                <td>FAQ question, categorized answer accordion, display order</td>
+                <td>Support &amp; FAQ Page</td>
+              </tr>
+              <tr>
+                <td><strong>Team Members</strong></td>
+                <td><code>/teams</code></td>
+                <td>Name, role, bio, photo, LinkedIn / Twitter social URLs</td>
+                <td>Faculty &amp; Leadership page</td>
+              </tr>
+              <tr>
+                <td><strong>Events</strong></td>
+                <td><code>/events</code></td>
+                <td>Title, venue, date, time, registration link, thumbnail</td>
+                <td>Upcoming Webinars &amp; Seminars</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 15: Communications & CRM -->
+      <section id="communications-crm" class="doc-section">
+        <h2><i class="fa-solid fa-envelope-open-text"></i> 15. Inquiries &amp; Newsletter CRM</h2>
+        <p>Capture and process incoming leads from the public website:</p>
+
+        <h3>15.1 Contact Inquiries (<code>/contacts</code>):</h3>
+        <ul>
+          <li>View submitted inquiries: name, email, phone, subject, and detailed message.</li>
+          <li>Filter by read/unread status and archive resolved inquiries.</li>
+        </ul>
+
+        <h3>15.2 Newsletter Subscribers (<code>/newsletter</code>):</h3>
+        <ul>
+          <li>View verified subscriber email addresses and subscription dates.</li>
+          <li>Export subscriber lists to CSV for email campaigns (Mailchimp, SendGrid).</li>
+        </ul>
+      </section>
+
+      <!-- Section 16: Platform Settings -->
+      <section id="settings-localization" class="doc-section">
+        <h2><i class="fa-solid fa-gear"></i> 16. Platform Settings &amp; Localization</h2>
+        <p>Configure global system variables, branding, and multilingual support via <code>/settings</code>.</p>
+
+        <div class="steps-container">
+          <div class="step-item">
+            <div class="step-badge">1</div>
+            <div class="step-content">
+              <h4>Branding &amp; Identity</h4>
+              <p>Upload primary application logo, favicon, dark-mode variant, and customize primary accent colors.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-badge">2</div>
+            <div class="step-content">
+              <h4>SMTP Outgoing Mail Server</h4>
+              <p>Configure host, port (587 / 465), username, and encryption. Use the built-in <strong>Test Connection &amp; Send Test Email</strong> button to verify deliverability before going live.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-badge">3</div>
+            <div class="step-content">
+              <h4>SEO &amp; Social Meta Tags</h4>
+              <p>Set global meta title, description, Open Graph share image, and Google Analytics / Tag Manager IDs.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-badge">4</div>
+            <div class="step-content">
+              <h4>Multilingual Dictionaries</h4>
+              <p>Manage supported languages in <code>/languages</code>. Define RTL (Right-to-Left) flags for scripts like Arabic or Urdu. Add question/option translations directly within the question authoring form.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 17: Recycle Bin -->
+      <section id="recycle-bin" class="doc-section">
+        <h2><i class="fa-solid fa-trash-can"></i> 17. System Recycle Bin &amp; Soft-Delete Recovery</h2>
+        <p>
+          To safeguard against accidental data loss, all deletion operations in KYP 5 are <strong>soft-deletes</strong>.
+        </p>
+
+        <div class="callout callout-info">
+          <div class="callout-title"><i class="fa-solid fa-shield-halved"></i> Data Protection Protocol</div>
+          When a user, test, question, banner, or blog is deleted, it is instantly hidden from operational lists and moved to the <strong>Recycle Bin</strong> (<code>/recycle-bin</code>). Records remain fully recoverable until an authorized Super Admin executes a permanent purge.
+        </div>
+
+        <h3>Recovery Steps:</h3>
+        <ol>
+          <li>Open <code>/recycle-bin</code> from the Admin Dashboard sidebar.</li>
+          <li>Filter by entity type (<i>Tests, Questions, Users, CMS</i>).</li>
+          <li>Click <strong>Restore</strong> to return the record to its active location with all mappings intact.</li>
+          <li>To permanently delete, select <strong>Purge Permanently</strong> (requires confirmation).</li>
+        </ol>
+      </section>
+
+      <!-- Section 18: Troubleshooting & FAQ -->
+      <section id="troubleshooting-faq" class="doc-section">
+        <h2><i class="fa-solid fa-circle-question"></i> 18. Troubleshooting &amp; Diagnostic FAQ</h2>
+
+        <div class="data-table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Observed Symptom</th>
+                <th>Probable Root Cause</th>
+                <th>Prescribed Resolution</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Dashboard displays "Network Error"</strong></td>
+                <td>Backend API is offline or <code>VITE_API_URL</code> is misconfigured.</td>
+                <td>Verify API is running (<code>npm run dev</code> in <code>backend/</code>). Confirm <code>http://localhost:7777/api/health</code> returns <code>{ "status": "ok" }</code>.</td>
+              </tr>
+              <tr>
+                <td><strong>PDF reports remain stuck in "PROCESSING"</strong></td>
+                <td>Puppeteer headless Chrome binary missing dependencies or crashed.</td>
+                <td>Check backend terminal logs. On Linux servers, install required libraries: <code>sudo apt-get install -y libnss3 libatk1.0-0 libx11-xcb1</code>. Re-run worker.</td>
+              </tr>
+              <tr>
+                <td><strong>Student cannot start assessment</strong></td>
+                <td>Test is in "Draft", date is outside window, or attempt limit reached.</td>
+                <td>Ensure test is <strong>Published</strong> and marked <strong>Active</strong>. Check student attempt count under <code>/students/:id</code>.</td>
+              </tr>
+              <tr>
+                <td><strong>Auto-submit didn't fire at zero seconds</strong></td>
+                <td>Backend server was stopped or cron scheduler disabled.</td>
+                <td>Ensure backend process is running continuously. The timeout scheduler catches up on unsubmitted expired attempts on startup.</td>
+              </tr>
+              <tr>
+                <td><strong>"403 Forbidden" on specific menu</strong></td>
+                <td>Staff user role lacks <code>read</code> permission for that module.</td>
+                <td>Log in as Super Admin. Navigate to <code>/permissions</code> or <code>/users/:id/permissions</code> and grant the necessary permission checkboxes.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 19: Developer API -->
+      <section id="developer-api" class="doc-section">
+        <h2><i class="fa-solid fa-code"></i> 19. API Quick Reference &amp; Default Credentials</h2>
+
+        <h3>Default Demonstration Credentials:</h3>
+        <div class="data-table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Account Type</th>
+                <th>Login Email</th>
+                <th>Password</th>
+                <th>Access Scope</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Super Administrator</strong></td>
+                <td><code>admin@gmail.com</code></td>
+                <td><code>Password@123</code></td>
+                <td>Full platform master privileges</td>
+              </tr>
+              <tr>
+                <td><strong>Sample Student</strong></td>
+                <td><code>rahul@student.com</code></td>
+                <td><code>Password@123</code></td>
+                <td>Candidate testing and reports</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Core REST Endpoints:</h3>
+        <div class="code-card">
+          <div class="code-header">
+            <span>KYP 5 API Surface Summary</span>
+            <button class="copy-code-btn"><i class="fa-regular fa-copy"></i> Copy</button>
+          </div>
+          <pre><code># Base URL: http://localhost:7777/api
+
+# Authentication & Health
+GET    /health
+POST   /admin/auth/login
+POST   /student/auth/login
+POST   /student/auth/register
+
+# Assessment Management
+GET    /admin/tests
+POST   /admin/tests
+POST   /admin/tests/:id/publish
+POST   /admin/tests/:id/unpublish
+GET    /admin/questions?testId=:id
+POST   /admin/assessment-option-scores
+
+# Student & Testing
+GET    /student/tests/available
+POST   /student/attempts/start
+POST   /student/attempts/:id/answer
+POST   /student/attempts/:id/submit
+GET    /student/reports/:attemptId/download
+
+# Content & CMS (Public)
+GET    /public/banners
+GET    /public/blogs
+GET    /public/pricing
+GET    /public/testimonials
+POST   /public/contact
+POST   /public/newsletter</code></pre>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Right Table of Contents (TOC) -->
+    <aside class="toc-container">
+      <div class="toc-title"><i class="fa-solid fa-list-ul"></i> On This Page</div>
+      <ul class="toc-list">
+        <li class="toc-item"><a href="#intro" class="toc-link active">1. System Overview</a></li>
+        <li class="toc-item"><a href="#architecture" class="toc-link">2. Architecture</a></li>
+        <li class="toc-item"><a href="#getting-started" class="toc-link">3. Installation &amp; Setup</a></li>
+        <li class="toc-item"><a href="#roles-permissions" class="toc-link">4. RBAC &amp; Roles</a></li>
+        <li class="toc-item"><a href="#assessment-groups" class="toc-link">5. Assessment Groups</a></li>
+        <li class="toc-item"><a href="#questions-weights" class="toc-link">6. Questions &amp; Weights</a></li>
+        <li class="toc-item"><a href="#tests-lifecycle" class="toc-link">7. Test Rules</a></li>
+        <li class="toc-item"><a href="#publishing-versioning" class="toc-link">8. Versioning</a></li>
+        <li class="toc-item"><a href="#students-management" class="toc-link">9. Students Roster</a></li>
+        <li class="toc-item"><a href="#institutions-portal" class="toc-link">10. Institutions Portal</a></li>
+        <li class="toc-item"><a href="#student-experience" class="toc-link">11. Student Experience</a></li>
+        <li class="toc-item"><a href="#results-normalization" class="toc-link">12. Results &amp; Scoring</a></li>
+        <li class="toc-item"><a href="#pdf-reports" class="toc-link">13. PDF Reports Worker</a></li>
+        <li class="toc-item"><a href="#cms-modules" class="toc-link">14. CMS Modules</a></li>
+        <li class="toc-item"><a href="#communications-crm" class="toc-link">15. Communications</a></li>
+        <li class="toc-item"><a href="#settings-localization" class="toc-link">16. Settings</a></li>
+        <li class="toc-item"><a href="#recycle-bin" class="toc-link">17. Recycle Bin</a></li>
+        <li class="toc-item"><a href="#troubleshooting-faq" class="toc-link">18. Troubleshooting</a></li>
+        <li class="toc-item"><a href="#developer-api" class="toc-link">19. API Reference</a></li>
+      </ul>
+    </aside>
+
+  </div>
+
+  <!-- Interactive JavaScript Engine -->
+  <script src="js/app.js"></script>
+</body>
+</html>

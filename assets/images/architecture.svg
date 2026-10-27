@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" width="100%" height="auto">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="primaryCard" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f46e5"/>
+      <stop offset="100%" stop-color="#4338ca"/>
+    </linearGradient>
+    <linearGradient id="cyanCard" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+    <linearGradient id="emeraldCard" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+    <linearGradient id="amberCard" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="900" height="360" rx="16" fill="url(#bgGrad)"/>
+  
+  <!-- Section Title -->
+  <text x="450" y="40" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="19" fill="#f8fafc" letter-spacing="0.5">KYP 5 Multi-Layer Enterprise Architecture</text>
+  <text x="450" y="62" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#94a3b8">Modular Separation of Public Experience, Admin Control, Assessment Engine &amp; PDF Delivery</text>
+
+  <!-- Card 1: Portals & UI Clients -->
+  <g transform="translate(40, 95)" filter="url(#cardShadow)">
+    <rect width="180" height="225" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+    <rect width="180" height="38" rx="12" fill="url(#primaryCard)"/>
+    <text x="90" y="24" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="13" fill="#ffffff">Client Portals</text>
+    
+    <!-- Badges inside -->
+    <rect x="15" y="55" width="150" height="36" rx="6" fill="#334155"/>
+    <text x="90" y="78" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="11.5" fill="#e2e8f0">Admin Dashboard (React)</text>
+
+    <rect x="15" y="105" width="150" height="36" rx="6" fill="#334155"/>
+    <text x="90" y="128" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="11.5" fill="#e2e8f0">Institution Portal</text>
+
+    <rect x="15" y="155" width="150" height="36" rx="6" fill="#334155"/>
+    <text x="90" y="178" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="11.5" fill="#e2e8f0">Student Assessment App</text>
+  </g>
+
+  <!-- Card 2: API Gateway & Security -->
+  <g transform="translate(260, 95)" filter="url(#cardShadow)">
+    <rect width="180" height="225" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+    <rect width="180" height="38" rx="12" fill="url(#cyanCard)"/>
+    <text x="90" y="24" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="13" fill="#ffffff">REST API &amp; Auth</text>
+
+    <rect x="15" y="55" width="150" height="36" rx="6" fill="#334155"/>
+    <text x="90" y="78" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="11.5" fill="#38bdf8">JWT &amp; RBAC Guard</text>
+
+    <rect x="15" y="105" width="150" height="36" rx="6" fill="#334155"/>
+    <text x="90" y="128" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="11.5" fill="#e2e8f0">Express &amp; TypeScript</text>
+
+    <rect x="15" y="155" width="150" height="36" rx="6" fill="#334155"/>
+    <text x="90" y="178" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="11.5" fill="#e2e8f0">Rate Limit &amp; CORS</text>
+  </g>
+
+  <!-- Card 3: Psychometric Core -->
+  <g transform="translate(480, 95)" filter="url(#cardShadow)">
+    <rect width="180" height="225" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+    <rect width="180" height="38" rx="12" fill="url(#emeraldCard)"/>
+    <text x="90" y="24" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="13" fill="#ffffff">Scoring &amp; Snapshots</text>
+
+    <rect x="15" y="55" width="150" height="36" rx="6" fill="#334155"/>
+    <text x="90" y="78" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="11.5" fill="#34d399">Group Weight Engine</text>
+
+    <rect x="15" y="105" width="150" height="36" rx="6" fill="#334155"/>
+    <text x="90" y="128" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="11.5" fill="#e2e8f0">Normalization Formula</text>
+
+    <rect x="15" y="155" width="150" height="36" rx="6" fill="#334155"/>
+    <text x="90" y="178" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="11.5" fill="#e2e8f0">Immutable Snapshots</text>
+  </g>
+
+  <!-- Card 4: Background Workers & DB -->
+  <g transform="translate(700, 95)" filter="url(#cardShadow)">
+    <rect width="160" height="225" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+    <rect width="160" height="38" rx="12" fill="url(#amberCard)"/>
+    <text x="80" y="24" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="13" fill="#ffffff">Workers &amp; Storage</text>
+
+    <rect x="15" y="55" width="130" height="36" rx="6" fill="#334155"/>
+    <text x="80" y="78" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="11" fill="#fbbf24">Puppeteer PDF Queue</text>
+
+    <rect x="15" y="105" width="130" height="36" rx="6" fill="#334155"/>
+    <text x="80" y="128" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="11" fill="#e2e8f0">Exam Timeout Cron</text>
+
+    <rect x="15" y="155" width="130" height="36" rx="6" fill="#334155"/>
+    <text x="80" y="178" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="11" fill="#e2e8f0">PostgreSQL + Prisma</text>
+  </g>
+
+  <!-- Connecting Arrows -->
+  <path d="M220 205 L260 205" stroke="#6366f1" stroke-width="3" stroke-dasharray="4" stroke-linecap="round"/>
+  <path d="M440 205 L480 205" stroke="#0284c7" stroke-width="3" stroke-dasharray="4" stroke-linecap="round"/>
+  <path d="M660 205 L700 205" stroke="#059669" stroke-width="3" stroke-dasharray="4" stroke-linecap="round"/>
+</svg>

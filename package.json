@@ -1,0 +1,13 @@
+{
+  "name": "kyp5-docs",
+  "version": "2.5.0",
+  "description": "KYP 5 Platform Official User Manual & Interactive Documentation",
+  "scripts": {
+    "dev": "vite --port 3333 --open",
+    "build": "vite build",
+    "preview": "vite preview --port 3333"
+  },
+  "devDependencies": {
+    "vite": "^6.0.0"
+  }
+}
