@@ -137,9 +137,10 @@ a:hover {
 }
 
 .brand-logo-img {
-  width: 34px;
-  height: 34px;
-  border-radius: 8px;
+  height: 38px;
+  width: auto;
+  max-width: 140px;
+  border-radius: 6px;
   object-fit: contain;
   flex-shrink: 0;
 }
