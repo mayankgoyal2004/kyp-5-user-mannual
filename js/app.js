@@ -1,6 +1,6 @@
 /* ==========================================================================
    KYP 5 Platform Documentation - Interactive Client Engine
-   Theme Switcher,    Instant Search (Ctrl+K), ScrollSpy & Lightbox
+   Theme Switcher,     Instant Search (Ctrl+K), ScrollSpy & Lightbox
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
