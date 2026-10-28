@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* --------------------------------------------------------------------------
-   1. Theme Management (Default: Light Mode with LocalStorage Memory)
+   1. Theme Management  (Default: Light Mode with LocalStorage Memory)
    -------------------------------------------------------------------------- */
 function initTheme() {
   const themeToggleBtn = document.getElementById('themeToggleBtn');
